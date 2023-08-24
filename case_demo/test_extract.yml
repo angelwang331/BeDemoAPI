@@ -26,3 +26,13 @@ test_b:
       url: ${url}
   validate:
   - eq: [status_code, 200]
+
+test_c:
+  name: 引用上个接口返回
+  request:
+    method: GET
+    url: http://httpbin.org/get
+    headers:
+      url: ${url}
+  validate:
+  - eq: [status_code, 200]
