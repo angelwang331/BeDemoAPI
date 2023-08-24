@@ -1,0 +1,9 @@
+name: post
+request:
+  method: POST
+  url: http://httpbin.org/post
+  json:
+    user: ${user | default("test")}
+    email: ${email | default("123@qq.com")}
+    tel: ${tel | default("12345678901234")}
+    address: ${address | default("沈阳市")}
